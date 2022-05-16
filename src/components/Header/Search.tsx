@@ -33,7 +33,6 @@ export default function Search() {
 		[setIsOpen, setInitialQuery]
 	);
 
-	console.log({ useDocSearchKeyboardEvents })
 	useDocSearchKeyboardEvents({
 		isOpen,
 		onOpen,
@@ -71,7 +70,6 @@ export default function Search() {
 						appId={(CONFIG as any).ALGOLIA.appId}
 						apiKey={(CONFIG as any).ALGOLIA.apiKey}
 						transformItems={(items) => {
-							console.log({ items })
 							return items.map((item) => {
 								// We transform the absolute URL into a relative URL to
 								// work better on localhost, preview URLS.
